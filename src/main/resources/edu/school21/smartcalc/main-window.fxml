@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.school21.smartcalc.view.MainWindowView">
+    <Label fx:id="expression" layoutX="29.0" layoutY="14.0" prefHeight="36.0" prefWidth="529.0" text="0" />
+    <Button fx:id="buttonBracketOpen" layoutX="29.0" layoutY="119.0" mnemonicParsing="false" onAction="#onBracketOpenButtonClick" prefHeight="26.0" prefWidth="41.0" text="(" />
+   <Button fx:id="buttonBracketClouse" layoutX="80.0" layoutY="119.0" mnemonicParsing="false" onAction="#onBracketClouseButtonClick" prefHeight="26.0" prefWidth="41.0" text=")" />
+   <Button fx:id="buttonLog" layoutX="132.0" layoutY="119.0" mnemonicParsing="false" onAction="#onTriganometryOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="log" />
+   <Button fx:id="buttonLn" layoutX="184.0" layoutY="119.0" mnemonicParsing="false" onAction="#onTriganometryOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="ln" />
+   <Button fx:id="buttonTan" layoutX="29.0" layoutY="153.0" mnemonicParsing="false" onAction="#onTriganometryOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="tan" />
+   <Button fx:id="buttonAtan" layoutX="80.0" layoutY="153.0" mnemonicParsing="false" onAction="#onTriganometryOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="atan" />
+   <Button fx:id="buttonAsin" layoutX="132.0" layoutY="153.0" mnemonicParsing="false" onAction="#onTriganometryOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="asin" />
+   <Button fx:id="buttonAcos" layoutX="184.0" layoutY="153.0" mnemonicParsing="false" onAction="#onTriganometryOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="acos">
+      <font>
+         <Font size="12.0" />
+      </font>
+   </Button>
+   <Button fx:id="buttonSin" layoutX="29.0" layoutY="187.0" mnemonicParsing="false" onAction="#onTriganometryOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="sin" />
+   <Button fx:id="buttonCos" layoutX="80.0" layoutY="187.0" mnemonicParsing="false" onAction="#onTriganometryOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="cos" />
+   <Button fx:id="buttonSqrt" layoutX="132.0" layoutY="187.0" mnemonicParsing="false" onAction="#onTriganometryOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="sqrt" />
+   <Button fx:id="buttonExp" layoutX="184.0" layoutY="187.0" mnemonicParsing="false" onAction="#onOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="^" />
+   <Button fx:id="buttonAC" layoutX="29.0" layoutY="220.0" mnemonicParsing="false" onAction="#onACButtonClick" prefHeight="26.0" prefWidth="41.0" text="AC" />
+   <Button fx:id="buttonClean" layoutX="80.0" layoutY="220.0" mnemonicParsing="false" onAction="#onCleanButtonClick" prefHeight="26.0" prefWidth="41.0" text="&lt;X" />
+   <Button fx:id="buttonRemainder" layoutX="132.0" layoutY="220.0" mnemonicParsing="false" onAction="#onOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="mod">
+      <font>
+         <Font size="12.0" />
+      </font>
+   </Button>
+   <Button fx:id="buttonDiv" layoutX="184.0" layoutY="220.0" mnemonicParsing="false" onAction="#onOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="/" />
+   <Button fx:id="button1" layoutX="29.0" layoutY="252.0" mnemonicParsing="false" onAction="#onNumberButtonClick" prefHeight="26.0" prefWidth="41.0" text="1" />
+   <Button fx:id="button2" layoutX="80.0" layoutY="252.0" mnemonicParsing="false" onAction="#onNumberButtonClick" prefHeight="26.0" prefWidth="41.0" text="2" />
+   <Button fx:id="button3" layoutX="132.0" layoutY="252.0" mnemonicParsing="false" onAction="#onNumberButtonClick" prefHeight="26.0" prefWidth="41.0" text="3" />
+   <Button fx:id="buttonMul" layoutX="184.0" layoutY="252.0" mnemonicParsing="false" onAction="#onOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="*" />
+   <Button fx:id="button4" layoutX="29.0" layoutY="286.0" mnemonicParsing="false" onAction="#onNumberButtonClick" prefHeight="26.0" prefWidth="41.0" text="4" />
+   <Button fx:id="button5" layoutX="80.0" layoutY="286.0" mnemonicParsing="false" onAction="#onNumberButtonClick" prefHeight="26.0" prefWidth="41.0" text="5" />
+   <Button fx:id="button6" layoutX="132.0" layoutY="286.0" mnemonicParsing="false" onAction="#onNumberButtonClick" prefHeight="26.0" prefWidth="41.0" text="6" />
+   <Button fx:id="buttonMinus" layoutX="184.0" layoutY="286.0" mnemonicParsing="false" onAction="#onMinusButtonClick" prefHeight="26.0" prefWidth="41.0" text="-" />
+   <Button fx:id="button7" layoutX="29.0" layoutY="320.0" mnemonicParsing="false" onAction="#onNumberButtonClick" prefHeight="26.0" prefWidth="41.0" text="7" />
+   <Button fx:id="button8" layoutX="80.0" layoutY="320.0" mnemonicParsing="false" onAction="#onNumberButtonClick" prefHeight="26.0" prefWidth="41.0" text="8" />
+   <Button fx:id="button9" layoutX="132.0" layoutY="320.0" mnemonicParsing="false" onAction="#onNumberButtonClick" prefHeight="26.0" prefWidth="41.0" text="9" />
+   <Button fx:id="buttonPlus" layoutX="184.0" layoutY="320.0" mnemonicParsing="false" onAction="#onOperationButtonClick" prefHeight="26.0" prefWidth="41.0" text="+" />
+   <Button fx:id="buttonX" layoutX="29.0" layoutY="353.0" mnemonicParsing="false" onAction="#onXButtonClick" prefHeight="26.0" prefWidth="41.0" text="x" />
+   <Button fx:id="button0" layoutX="80.0" layoutY="353.0" mnemonicParsing="false" onAction="#onNumberButtonClick" prefHeight="26.0" prefWidth="41.0" text="0" />
+   <Button fx:id="buttonPoint" layoutX="132.0" layoutY="353.0" mnemonicParsing="false" onAction="#onPointButtonClick" prefHeight="26.0" prefWidth="41.0" text="." />
+   <Button fx:id="buttonEquall" layoutX="184.0" layoutY="353.0" mnemonicParsing="false" onAction="#onEquallButtonClick" prefHeight="26.0" prefWidth="41.0" text="=" />
+   <Label layoutX="31.0" layoutY="54.0" prefHeight="26.0" prefWidth="25.0" text="X =" />
+   <Label fx:id="answer" layoutX="29.0" layoutY="78.0" prefHeight="36.0" prefWidth="196.0" />
+   <TextField fx:id="valueX" layoutX="56.0" layoutY="54.0" prefHeight="26.0" prefWidth="171.0" text="0" />
+   <Button fx:id="buttonE" layoutX="29.0" layoutY="385.0" mnemonicParsing="false" onAction="#onEButtonClick" prefHeight="26.0" prefWidth="41.0" text="e" />
+   <Button fx:id="buttonPlot" layoutX="80.0" layoutY="385.0" mnemonicParsing="false" onAction="#onPlotButtonClick" prefHeight="26.0" prefWidth="145.0" text="plot" />
+   <LineChart fx:id="plot" layoutX="221.0" layoutY="178.0" prefHeight="255.0" prefWidth="350.0">
+     <xAxis>
+        <NumberAxis prefHeight="30.0" prefWidth="285.0" side="BOTTOM" fx:id="xAxis" />
+     </xAxis>
+     <yAxis>
+       <NumberAxis fx:id="yAxis" side="LEFT" />
+     </yAxis>
+   </LineChart>
+   <Spinner editable="true" layoutX="469.0" layoutY="57.0" prefHeight="0.0" prefWidth="88.0" fx:id="xMax" />
+   <Spinner fx:id="yMax" editable="true" layoutX="469.0" layoutY="122.0" prefHeight="14.0" prefWidth="88.0" />
+   <Spinner editable="true" layoutX="469.0" layoutY="91.0" prefHeight="0.0" prefWidth="88.0" fx:id="xMin" />
+   <Spinner fx:id="yMin" editable="true" layoutX="469.0" layoutY="156.0" prefHeight="14.0" prefWidth="88.0" />
+   <Label layoutX="426.0" layoutY="57.0" prefHeight="26.0" prefWidth="52.0" text="Xmax =" />
+   <Label layoutX="426.0" layoutY="122.0" prefHeight="26.0" prefWidth="52.0" text="Ymax =" />
+   <Label layoutX="426.0" layoutY="91.0" prefHeight="26.0" prefWidth="52.0" text="Xmin =" />
+   <Label layoutX="426.0" layoutY="156.0" prefHeight="26.0" prefWidth="52.0" text="Ymin =" />
+   <ListView fx:id="listView" layoutX="247.0" layoutY="52.0" prefHeight="101.0" prefWidth="171.0" />
+   <Button fx:id="clearListView" layoutX="307.0" layoutY="156.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="26.0" prefWidth="52.0" text="clear" />
+   <Label layoutX="7.0" layoutY="425.0" prefHeight="17.0" prefWidth="586.0" text="Используйте &lt;X чтобы стереть одни символ или AC для стирания всех символов.  Clear - сотрет историю. Plot - построить граффик">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Label>
+</Pane>
